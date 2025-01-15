@@ -1,0 +1,127 @@
+:root {
+  --backgraund-branco: #fafdfe;
+  --backgraund-Preto: #1e1e1e;
+  --text-color-Preto-cinza: #535353;
+  --text-color-Azul: #273ce0;
+  --text-color-preto: #1e1e1e;
+  --text-color-Branco: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html,
+body {
+  font-family: "Poppins", serif;
+}
+
+body {
+  font-size: 62.5%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+header {
+  position: relative;
+  padding: 2rem;
+  justify-items: center;
+  background-image: url("../assets/forms/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
+
+header .logo img {
+  width: 120px;
+}
+header .container-menu {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul a {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color-Branco);
+  transition: color 0.3s ease;
+  z-index: 20;
+}
+
+nav ul a::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  top: 28px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--text-color-Branco);
+  transition: width 0.3s ease;
+}
+
+nav ul a:hover::after {
+  width: 100%;
+}
+
+header .photo-destaque {
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+header .photo-destaque img {
+  width: 75%;
+}
+header .photo-destaque .logo img {
+  margin-left: 12em;
+}
+main {
+  padding: 2em;
+}
+section .home .hero-container {
+  position: relative;
+}
+
+/* Estilo inicial do menu hambúrguer */
+.menu-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  cursor: pointer;
+  right: 20px;
+  z-index: 20;
+  position: absolute;
+}
+
+.menu-hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-color-Branco);
+  transition: all 0.3s ease;
+}
+
+/* Transformar o ícone em X */
+.menu-hamburger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 10px);
+  }
+  
+  .menu-hamburger.active .line:nth-child(2) {
+    opacity: 0; /* Esconder a linha do meio */
+  }
+  
+  .menu-hamburger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -12px);
+  }
