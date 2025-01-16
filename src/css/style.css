@@ -78,6 +78,7 @@ nav ul a:hover::after {
 header .photo-destaque {
   padding: 2em;
   display: flex;
+  flex-wrap: wrap-reverse;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -85,14 +86,15 @@ header .photo-destaque {
 header .photo-destaque img {
   width: 75%;
 }
-header .photo-destaque .logo img {
-  margin-left: 12em;
-}
-main {
-  padding: 2em;
-}
-section .home .hero-container {
+header .photo-destaque .logo {
   position: relative;
+  width: 40%;
+}
+header .photo-destaque .logo img {
+  left: 0;
+  bottom: -25px;
+  width: 100%;
+  position: absolute;
 }
 
 /* Estilo inicial do menu hambúrguer */
@@ -115,13 +117,84 @@ section .home .hero-container {
 
 /* Transformar o ícone em X */
 .menu-hamburger.active .line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 10px);
-  }
-  
-  .menu-hamburger.active .line:nth-child(2) {
-    opacity: 0; /* Esconder a linha do meio */
-  }
-  
-  .menu-hamburger.active .line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -12px);
-  }
+  transform: rotate(45deg) translate(5px, 10px);
+}
+
+.menu-hamburger.active .line:nth-child(2) {
+  opacity: 0; /* Esconder a linha do meio */
+}
+
+.menu-hamburger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -12px);
+}
+
+main {
+  padding: 4em;
+  width: 100%;
+  overflow: hidden;
+}
+
+main section.home .hero-container-palestra {
+  position: relative;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+main section.home .hero-container-palestra .hero-container-text {
+  text-align: center;
+  margin-bottom: 6em;
+}
+main section.home .hero-container-palestra .hero-container-text h1 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--text-color-Azul);
+}
+main section.home .hero-container-palestra .hero-container-text h2 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text-color-Azul);
+}
+main section.home .hero-container-palestra .hero-container-text p {
+  font-size: 1rem;
+  color: var(--text-color-preto);
+}
+main section.home .hero-container-palestra .ui-design {
+  position: absolute;
+  width: 100%;
+}
+main section.home .hero-container-palestra .hero-container-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+  justify-content: center;
+  align-items: center;
+
+}
+
+main section.home .hero-container-palestra .hero-container-card .card {
+  flex-grow: 1;
+  flex-basis: 100%; 
+  max-width: 300px; 
+  margin: 5px;
+  text-align: center; 
+  border-radius: 8px;
+  overflow: hidden; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+main section.home .hero-container-palestra .hero-container-card .card img {
+  width: 100%; /* Faz a imagem ocupar toda a largura do card */
+  height: auto;
+  display: block;
+}
+
+main section.home .hero-container-palestra .hero-container-card .card:hover {
+  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais forte ao interagir */
+}
+
+
