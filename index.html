@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conferencia dos jovens</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="stylesheet" href="./src/css/responsivo.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Menu-->
+      <div class="container-menu">
+        <div class="logo">
+          <img src="./src/assets/logo/logo_branco.png" alt="Logo" />
+        </div>
+
+        <!-- Menu Hamburguer -->
+        <div class="menu-hamburger" onclick="toggleMenu()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="#Home">Página Inicial</a></li>
+            <li><a href="#About">Sobre Evento</a></li>
+            <li><a href="#Retratos">Retratos</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="photo-destaque">
+        <div class="logo">
+          <img src="./src/assets/logo/logo_branco.png" alt="Logo" />
+        </div>
+        <div class="photo">
+          <img src="./src/assets/forms/photo.png" alt="Photo" />
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Setion de destaque da pagina inicial -->
+      <section id="Home" class="home">
+        <div class="hero-container-palestra">
+          <div class="hero-container-text">
+            <h1>Palestrantes</h1>
+            <h2>Inspiração em Cada História</h2>
+            <p>
+              Conheça os profissionais incríveis que trarão mensagens
+              inspiradoras e ensinamentos valiosos para ajudar você a alcançar
+              seus objetivos
+            </p>
+          </div>
+          <div class="ui-design">
+            <img src="./src/assets/forms/design-sectio-1.png" alt="Ui-design" />
+          </div>
+          <div class="hero-container-card" id="card"></div>
+        </div>
+        <!-- <div class="hero-container">
+          <div class="logo">
+            <img src="./assets/logo/logo_branco.png" alt="Logo-branco" />
+          </div>
+          <div>
+            <img src="./assets/forms/design.png" alt="Ui-design" />
+          </div>
+        </div> -->
+      </section>
+      <!-- Setion sobre o evento -->
+      <section id="About">
+        <h1>Sobre a Conferência</h1>
+        <div class="Ui-design-line">
+          <img src="./src/assets/forms/design-sectiom-2.png" alt="Ui-design" />
+        </div>
+        <div class="hero-container-card">
+          <div class="card-img">
+            <img src="./src/assets/forms/fundo.jpg" alt="Img-Background" />
+          </div>
+          <div class="hero-container-text">
+            <p>
+              <span>A Conferência de Jovens de Sucessos</span> é um evento
+              transformador que visa inspirar e capacitar jovens a alcançarem
+              seus maiores objetivos, vivendo uma vida com propósito, clareza de
+              visão e foco no sucesso
+            </p>
+          </div>
+        </div>
+        <div class="ui-design">
+          <div class="back-1">
+            <img src="./src/assets/forms/componetForm1.png" alt="Ui-design" />
+          </div>
+          <div class="back-2">
+            <img src="./src/assets/forms/componetForm2.png" alt="Ui-design" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Setion outras informações -->
+      <section id="Retratos">
+        <div class="hero-conteudo">
+          <div class="titulo">
+            <h1>Retratos</h1>
+            <h2>Momentos que inspiram</h2>
+          </div>
+
+          <p>
+            Um retrato vale mais que mil palavras. Através de nossas lentes,
+            capturamos momentos que refletem emoções genuínas, histórias
+            marcantes e inspirações inesquecíveis. Cada clique conta uma
+            história, cada imagem é uma janela para a alma de quem nela habita.
+            Inspire-se!
+          </p>
+        </div>
+        <div class="hero-container-card-photo"></div>
+      </section>
+
+      <section id="Parceiros">
+        <div class="hero-conteudo">
+          <div class="titulo">
+            <h1>Parceiros</h1>
+            <h2>Colaboradores que constroem sonhos</h2>
+          </div>
+
+          <p>
+            Nossos parceiros são parte essencial de nossa jornada. Com eles,
+            construímos pontes, criamos oportunidades e geramos impacto positivo
+            em nossa comunidade. Juntos, mostramos que o sucesso não é apenas
+            uma meta, mas um caminho trilhado em equipe.
+          </p>
+        </div>
+        <div class="hero-container-card-parceiro"></div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <!-- Coluna 1: Logo e Descrição -->
+      <div class="footer-info">
+        <div class="logo">
+          <img src="./src/assets/logo/logo_branco.png" alt="Logo" />
+        </div>
+        <h3>Conferência de Jovens de Sucesso</h3>
+        <p>
+          A Conferência de Jovens de Sucesso inspira jovens a alcançarem seus
+          maiores objetivos, vivendo uma vida com propósito, visão e foco no
+          sucesso.
+        </p>
+      </div>
+      <div class="footer-container">
+        <!-- Coluna 2: Links Úteis -->
+        <div class="footer-links">
+          <h4>Links Úteis</h4>
+          <ul>
+            <li><a href="#">Página Inicial</a></li>
+            <li><a href="#">Sobre o Evento</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Contato -->
+        <div class="footer-contact">
+          <h4>Contato</h4>
+          <ul>
+            <li><i class="fas fa-phone"></i> +244 943 905 799</li>
+            <li><i class="fas fa-whatsapp"></i> +244 948 123 456</li>
+            <li><i class="fas fa-envelope"></i> vaocriativos@gmail.com</li>
+          </ul>
+        </div>
+
+        <!-- Coluna 4: Ícones Sociais -->
+        <div class="footer-social">
+          <h4>Siga-nos</h4>
+          <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rodapé inferior -->
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 Conferência de Jovens de Sucesso. Todos os direitos
+          reservados.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Botão "Voltar ao Topo" -->
+    <div id="back-to-top" onclick="scrollToTop()">&#8593;</div>
+
+    <!-- Chamada do js -->
+    <script src="./src/js/js.js"></script>
+  </body>
+</html>

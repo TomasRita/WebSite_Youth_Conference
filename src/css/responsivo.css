@@ -30,6 +30,7 @@
   .menu-hamburger.active {
     position: fixed;
   }
+
   nav.active ul {
     display: flex;
     opacity: 1;
@@ -39,8 +40,7 @@
     position: relative;
     align-items: flex-start;
     padding: 0px;
-    height: auto;
-    margin: 4em 0px;
+    margin: 0em 0px;
   }
   header .photo-destaque .photo img {
     width: 100%;
@@ -57,8 +57,115 @@
     max-width: 100%;
     height: auto;
   }
+
   main section.home .hero-container-palestra .ui-design {
     display: none;
   }
+  main section#About .hero-container-card {
+    margin: 4em 0;
+  }
+  main section#About .ui-design {
+    display: none;
+  }
+  main section#About .hero-container-card .hero-container-text p {
+    margin: 1em 0em;
+  }
 
+  main section#Retratos .hero-conteudo p {
+    margin: 1em 0em;
+  }
+  main section#Parceiros .hero-conteudo p {
+    margin: 1em 0em;
+  }
+  .footer-container {
+    flex-direction: column; /* Empilha as colunas em telas menores */
+    align-items: center;
+  }
+  .footer-info {
+    margin: 0;
+  }
+  .footer-info,
+  .footer-links,
+  .footer-contact,
+  .footer-social {
+    flex: none;
+    min-width: 100%;
+    text-align: center; /* Centraliza o conteúdo nas colunas */
+  }
+
+  .footer-info p {
+    max-width: 100%; /* Permite que a descrição ocupe toda a largura */
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem; /* Menor tamanho de fonte no rodapé inferior */
+    padding: 15px 0;
+  }
+}
+@media (max-width: 509px) {
+  header {
+    height: 50vh;
+    width: 100%;
+  }
+  main section.home {
+    margin-top: 16em;
+  }
+}
+/* Tela menor que 480px (celulares em modo retrato) */
+@media (max-width: 480px) {
+  .footer-info h3 {
+    font-size: 1.2rem; /* Tamanho da fonte reduzido */
+  }
+
+  .footer-info p {
+    font-size: 0.9rem; /* Tamanho do texto reduzido */
+  }
+
+  .footer-links h4,
+  .footer-contact h4 {
+    font-size: 1rem; /* Reduz o tamanho dos títulos das seções */
+  }
+
+  .footer-links ul li a {
+    font-size: 0.9rem; /* Reduz o tamanho da fonte dos links */
+  }
+
+  .footer-contact ul li {
+    font-size: 0.9rem; /* Reduz o tamanho da fonte do contato */
+  }
+
+  .social-icons a {
+    font-size: 1.3rem; /* Reduz o tamanho dos ícones sociais */
+  }
+}
+
+@media (max-width: 477px) {
+  header {
+    height: 50vh;
+    width: 100%;
+  }
+  main section.home {
+    margin-top: 12em;
+  }
+}
+@media (max-width: 390px) {
+  main section.home {
+    margin-top: 4em;
+  }
+}
+@media (max-width: 320px) {
+  main section.home {
+    margin-top: 0em;
+  }
 }
