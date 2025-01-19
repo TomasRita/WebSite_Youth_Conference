@@ -458,7 +458,9 @@ footer {
   font-size: 1.2rem;
   margin-bottom: 15px;
 }
-
+.footer-social h4 {
+  font-size: 1.2rem;
+}
 .footer-contact ul {
   list-style: none;
   padding: 0;
@@ -492,7 +494,7 @@ footer {
 }
 
 .social-icons a:hover {
-  color: #f4a261; /* Cor de destaque ao passar o mouse */
+  color: #e4e4e4; 
 }
 
 /* Rodapé inferior */
@@ -503,6 +505,7 @@ footer {
   font-size: 0.9rem;
   margin-top: 20px;
 }
+
 /* Botão flutuante "Voltar ao Topo" */
 #back-to-top {
   position: fixed;
@@ -510,26 +513,74 @@ footer {
   right: 20px;
   width: 50px;
   height: 50px;
-  background-color: var(--text-color-Azul); /* Cor de fundo */
-  color: white; /* Cor do ícone */
-  border-radius: 50%; /* Botão redondo */
+  background-color: var(--text-color-Azul); 
+  color: white; 
+  border-radius: 50%; 
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 24px;
   cursor: pointer;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
-  opacity: 0; /* Invisível inicialmente */
-  visibility: hidden; /* Oculta inicialmente */
-  transition: opacity 0.3s ease, visibility 0.3s ease; /* Transições suaves */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  opacity: 0; 
+  visibility: hidden; 
+  transition: opacity 0.3s ease, visibility 0.3s ease; 
 }
 
 #back-to-top:hover {
-  background-color: #0056b3; /* Cor ao passar o mouse */
+  background-color: #0056b3; 
 }
 
-/* Mostra o botão quando necessário */
+
 #back-to-top.show {
   opacity: 1;
   visibility: visible;
 }
+
+/* Spinner */
+.spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--backgraund-branco);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  border-radius: 4px;
+}
+
+.spinner:after {
+  content: '';
+  border: 4px solid #f3f3f3; 
+  border-top: 4px solid var(--text-color-Azul); 
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite; 
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); 
+  }
+  100% {
+    transform: rotate(360deg); 
+  }
+}
+
+/* Estilo inicial para os elementos */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Estilo quando o elemento se torna visível */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+

@@ -198,12 +198,38 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// Função para rolar suavemente até o topo
 function scrollToTop() {
   window.scrollTo({
     top: 0,
-    behavior: "smooth", // Rolagem suave
+    behavior: "smooth",
   });
 }
 
+function hideLoadingSkeleton() {
+  var loadingOverlay = document.querySelector(".spinner");
+  if (loadingOverlay) {
+    loadingOverlay.style.display = "none";
+  }
+}
+
+function revealElements() {
+  const elements = document.querySelectorAll(".fade-in");
+  const windowHeight = window.innerHeight;
+  elements.forEach((element) => {
+    const elementTop = element.getBoundingClientRect().top;
+    if (elementTop < windowHeight - 100) {
+      element.classList.add("visible");
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  revealElements();
+  window.addEventListener("scroll", revealElements);
+});
+
+revealElements();
+
+//time
+setTimeout(hideLoadingSkeleton, 3000);
 window.addEventListener("DOMContentLoaded", handlCard);

@@ -30,7 +30,7 @@
   .menu-hamburger.active {
     position: fixed;
   }
-
+ 
   nav.active ul {
     display: flex;
     opacity: 1;
@@ -70,7 +70,7 @@
   main section#About .hero-container-card .hero-container-text p {
     margin: 1em 0em;
   }
-
+  
   main section#Retratos .hero-conteudo p {
     margin: 1em 0em;
   }
@@ -80,6 +80,7 @@
   .footer-container {
     flex-direction: column; /* Empilha as colunas em telas menores */
     align-items: center;
+
   }
   .footer-info {
     margin: 0;
@@ -120,10 +121,11 @@
   }
   main section.home {
     margin-top: 16em;
-  }
+   }
 }
 /* Tela menor que 480px (celulares em modo retrato) */
 @media (max-width: 480px) {
+
   .footer-info h3 {
     font-size: 1.2rem; /* Tamanho da fonte reduzido */
   }
@@ -157,15 +159,16 @@
   }
   main section.home {
     margin-top: 12em;
-  }
+   }
 }
 @media (max-width: 390px) {
   main section.home {
     margin-top: 4em;
-  }
+   }
 }
 @media (max-width: 320px) {
   main section.home {
     margin-top: 0em;
-  }
+   }
 }
+
