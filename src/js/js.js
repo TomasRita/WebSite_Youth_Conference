@@ -222,6 +222,49 @@ function revealElements() {
     }
   });
 }
+var quantity = 15; // Número de fireflies
+var container = document.getElementById("fireflies-container"); // Contêiner para as fireflies
+
+// Função para gerar animações aleatórias de movimento para cada firefly
+function generateMovementAnimation(i) {
+  return `
+    @keyframes move${i} {
+      0% { transform: translateX(-50vw) translateY(-50vh) scale(0.5); }
+      100% { transform: translateX(50vw) translateY(50vh) scale(0.75); }
+    }
+  `;
+}
+
+// Adiciona animações de movimento no cabeçalho do documento
+var style = document.createElement("style");
+for (var i = 1; i <= quantity; i++) {
+  style.innerHTML += generateMovementAnimation(i);
+}
+document.head.appendChild(style);
+
+// Cria as fireflies
+for (var i = 1; i <= quantity; i++) {
+  // Cria o elemento firefly
+  var firefly = document.createElement("div");
+  firefly.classList.add("firefly"); // Adiciona a classe firefly
+
+  // Gera um nome de animação único para cada firefly
+  firefly.style.animationName = `move${i}, flash`; // Movimento e flash
+
+  // Gera animações aleatórias de duração e delay
+  var rotationSpeed = Math.random() * 8 + 8; // Aleatório entre 8s e 16s
+  firefly.style.animationDuration = `${rotationSpeed}s, ${Math.random() * 6000 + 5000}ms`; // Atraso para o efeito de flash
+  firefly.style.animationDelay = `${Math.random() * 8000 + 500}ms`; // Atraso na animação
+  
+  // Gera uma posição aleatória para a firefly
+  var positionX = Math.random() * 100; // Aleatório entre 0% e 100%
+  var positionY = Math.random() * 100; // Aleatório entre 0% e 100%
+  firefly.style.left = `${positionX}vw`;
+  firefly.style.top = `${positionY}vh`;
+  
+  // Adiciona o firefly ao contêiner
+  container.appendChild(firefly);
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   revealElements();
@@ -233,3 +276,5 @@ revealElements();
 //time
 setTimeout(hideLoadingSkeleton, 3000);
 window.addEventListener("DOMContentLoaded", handlCard);
+
+

@@ -26,6 +26,8 @@ body {
   overflow: hidden;
   overflow-y: scroll;
 }
+
+
 header {
   position: relative;
   padding: 2rem;
@@ -37,6 +39,7 @@ header {
   height: 100vh;
   width: 100%;
 }
+
 
 header .logo img {
   width: 120px;
@@ -575,15 +578,3 @@ footer {
   }
 }
 
-/* Estilo inicial para os elementos */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
-/* Estilo quando o elemento se torna visível */
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
