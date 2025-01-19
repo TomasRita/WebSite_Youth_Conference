@@ -2,15 +2,23 @@
 const formdados = [
   {
     id: 1,
-    src: "./src/assets/forms/foto.png",
+    src: "./src/assets/img/Belarmino Salomão.png",
   },
   {
     id: 2,
-    src: "./src/assets/forms/foto.png",
+    src: "./src/assets/img/Domingos Ipoteluia.png",
   },
   {
     id: 3,
-    src: "./src/assets/forms/foto.png",
+    src: "./src/assets/img/Janil Kimbanza.png",
+  },
+  {
+    id: 4,
+    src: "./src/assets/img/Josafath Mussaba.png",
+  },
+  {
+    id: 5,
+    src: "./src/assets/img/Pedro.png",
   },
 ];
 //Fotos
